@@ -3,6 +3,7 @@ import './normalize.css'
 import './App.css'
 import { useEffect, useState } from 'react'
 import { AngleData } from './model/AngleData'
+import BubbleRadar from './component/BubbleRadar'
 
 function App() {
   const [angleData, setOrientationData] = useState<AngleData>(
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <>
+      <BubbleRadar beta={angleData.beta} gamma={angleData.gamma} />
       <AngleLabel beta={angleData.beta} gamma={angleData.gamma} />
     </>
   )
