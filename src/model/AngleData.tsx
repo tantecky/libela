@@ -12,7 +12,7 @@ export class AngleData implements IAngleData {
   gamma: number
 
   constructor(beta: number, gamma: number) {
-    this.beta = clipAngle(beta)
-    this.gamma = clipAngle(gamma)
+    this.beta = clipAngle(beta - Number(localStorage.getItem('beta')) || 0.0)
+    this.gamma = clipAngle(gamma - Number(localStorage.getItem('gamma')) || 0.0)
   }
 }

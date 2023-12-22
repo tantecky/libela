@@ -27,7 +27,11 @@ function App() {
     <>
       <BubbleRadar beta={angleData.beta} gamma={angleData.gamma} />
       <AngleLabel beta={angleData.beta} gamma={angleData.gamma} />
-      <ZeroReset />
+      <ZeroReset
+        beta={angleData.beta}
+        gamma={angleData.gamma}
+        setOrientationData={setOrientationData}
+      />
     </>
   )
 }
