@@ -1,3 +1,9 @@
-.angle-label td {
-  text-align: end;
+.angle-label {
+  font-size: 30pt;
+  text-align: center;
+}
+
+.angle-label p {
+  margin: 0;
+  margin-top: 10px;
 }
