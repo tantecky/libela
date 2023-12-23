@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import { AngleData } from './model/AngleData'
 import BubbleRadar from './component/BubbleRadar'
 import ZeroReset from './component/ZeroReset'
+import InstallButton from './component/InstallButton'
 
 function App() {
   const [angleData, setOrientationData] = useState<AngleData>(
@@ -25,13 +26,16 @@ function App() {
 
   return (
     <>
-      <BubbleRadar beta={angleData.beta} gamma={angleData.gamma} />
-      <AngleLabel beta={angleData.beta} gamma={angleData.gamma} />
-      <ZeroReset
-        beta={angleData.beta}
-        gamma={angleData.gamma}
-        setOrientationData={setOrientationData}
-      />
+      <InstallButton />
+      <div className="container-center">
+        <BubbleRadar beta={angleData.beta} gamma={angleData.gamma} />
+        <AngleLabel beta={angleData.beta} gamma={angleData.gamma} />
+        <ZeroReset
+          beta={angleData.beta}
+          gamma={angleData.gamma}
+          setOrientationData={setOrientationData}
+        />
+      </div>
     </>
   )
 }

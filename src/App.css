@@ -1,9 +1,17 @@
 body {
+  color: white;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-52%, -48%);
-  color: white;
+}
+
+button {
   background-color: black;
-  font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
