@@ -6,6 +6,7 @@ import { AngleData } from './model/AngleData'
 import BubbleRadar from './component/BubbleRadar'
 import ZeroReset from './component/ZeroReset'
 import InstallButton from './component/InstallButton'
+import Footer from './component/Footer'
 
 function App() {
   const [angleData, setOrientationData] = useState<AngleData>(
@@ -35,6 +36,7 @@ function App() {
           gamma={angleData.gamma}
           setOrientationData={setOrientationData}
         />
+        <Footer />
       </div>
     </>
   )

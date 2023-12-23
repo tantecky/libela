@@ -1,0 +1,10 @@
+.footer {
+  text-align: center;
+  a:link {
+    color: white;
+  }
+  a:visited {
+    color: white;
+  }
+  margin-top: 40px;
+}
