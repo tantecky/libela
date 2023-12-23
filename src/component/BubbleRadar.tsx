@@ -3,6 +3,8 @@ import { IAngleData } from '../model/AngleData'
 import { useEffect } from 'react'
 
 const BUBBLE_RADIUS = 15
+const CIRCLE_RADIUS = 20
+const CIRCLE_BORDER_WIDTH = 5
 const MAX_ANGLE = 90
 
 function setRadarSize(): number {
@@ -20,12 +22,19 @@ function setRadarSize(): number {
 export default function BubbleRadar({ beta, gamma }: IAngleData) {
   useEffect(() => {
     const radarRadius = setRadarSize() / 2
-    let bubble = document.getElementById('bubble') as HTMLCanvasElement
 
-    const center = radarRadius - BUBBLE_RADIUS
-
+    let bubble = document.getElementById('bubble') as HTMLElement
+    const centerBubble = radarRadius - BUBBLE_RADIUS + CIRCLE_BORDER_WIDTH
     bubble.style.width = `${BUBBLE_RADIUS * 2}px`
     bubble.style.height = `${BUBBLE_RADIUS * 2}px`
+    bubble.style.borderWidth = `${CIRCLE_BORDER_WIDTH}px`
+
+    let circle = document.getElementById('circle') as HTMLElement
+    const centerCircle = radarRadius - CIRCLE_RADIUS
+    circle.style.width = `${CIRCLE_RADIUS * 2}px`
+    circle.style.height = `${CIRCLE_RADIUS * 2}px`
+    circle.style.top = `${centerCircle}px`
+    circle.style.left = `${centerCircle}px`
 
     const betaNorm = beta / MAX_ANGLE
     const gammaNorm = gamma / MAX_ANGLE
@@ -34,8 +43,8 @@ export default function BubbleRadar({ beta, gamma }: IAngleData) {
     const dy = betaNorm * radarRadius
 
     if (dx ** 2 + dy ** 2 < (radarRadius - BUBBLE_RADIUS) ** 2) {
-      bubble.style.top = `${center - dy}px`
-      bubble.style.left = `${center - dx}px`
+      bubble.style.top = `${centerBubble - dy}px`
+      bubble.style.left = `${centerBubble - dx}px`
     }
 
     // let canvas = document.getElementById('canvas') as HTMLCanvasElement
@@ -48,6 +57,7 @@ export default function BubbleRadar({ beta, gamma }: IAngleData) {
 
   return (
     <div id="radar">
+      <div id="circle"></div>
       <div id="bubble"></div>
     </div>
   )

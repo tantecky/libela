@@ -31,7 +31,7 @@ export default function InstallButton() {
       hidden={buttonHidden}
       onClick={() => Install(setButtonHidden)}
     >
-      Install
+      ⬇Install
     </button>
   )
 }

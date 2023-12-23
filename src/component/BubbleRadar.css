@@ -16,3 +16,16 @@
   background: red;
   border-radius: 100%;
 }
+
+#circle {
+  position: absolute;
+  top: 140px;
+  left: 140px;
+  width: 30px;
+  height: 30px;
+  border-width: 5px;
+  border-radius: 10px;
+  border-radius: 100%;
+  border-color: white;
+  border-style: solid;
+}
