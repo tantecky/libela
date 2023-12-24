@@ -7,18 +7,19 @@ import { VitePWA } from 'vite-plugin-pwa'
 export default defineConfig({
   plugins: [
     react(),
-    basicSsl(),
+    // basicSsl(),
     VitePWA({
       registerType: 'autoUpdate',
       devOptions: {
         // enabled: true,
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+        // globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
       },
       manifest: {
         name: 'Libela',
         short_name: 'Libela',
+        id: '2',
         description: 'Simple bubble level for your phone',
         theme_color: '#000000',
         background_color: '#000000',
