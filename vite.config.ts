@@ -19,7 +19,7 @@ export default defineConfig({
       manifest: {
         name: 'Libela',
         short_name: 'Libela',
-        id: '3',
+        id: '4',
         description: 'Simple bubble level for your phone',
         theme_color: '#000000',
         background_color: '#000000',
@@ -53,13 +53,4 @@ export default defineConfig({
       },
     }),
   ],
-  build: {
-    rollupOptions: {
-      output: {
-        entryFileNames: `assets/[name].js`,
-        chunkFileNames: `assets/[name].js`,
-        assetFileNames: `assets/[name].[ext]`,
-      },
-    },
-  },
 })
