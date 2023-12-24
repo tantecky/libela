@@ -46,14 +46,7 @@ export default function BubbleRadar({ beta, gamma }: IAngleData) {
       bubble.style.top = `${centerBubble - dy}px`
       bubble.style.left = `${centerBubble - dx}px`
     }
-
-    // let canvas = document.getElementById('canvas') as HTMLCanvasElement
-    // let ctx = canvas.getContext('2d') as CanvasRenderingContext2D
-    // ctx.strokeStyle = 'white'
-    // ctx.moveTo(0, 0)
-    // ctx.lineTo(beta, gamma)
-    // ctx.stroke()
-  })
+  }, [beta, gamma])
 
   return (
     <div id="radar">

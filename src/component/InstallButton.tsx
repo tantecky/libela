@@ -23,7 +23,7 @@ export default function InstallButton() {
       installPrompt = event
       setButtonHidden(false)
     })
-  })
+  }, [])
   return (
     <button
       className="install-button"
