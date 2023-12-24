@@ -19,7 +19,7 @@ export default defineConfig({
       manifest: {
         name: 'Libela',
         short_name: 'Libela',
-        id: '2',
+        id: '3',
         description: 'Simple bubble level for your phone',
         theme_color: '#000000',
         background_color: '#000000',
